@@ -10,8 +10,12 @@ export class CarService {
   constructor(private http: HttpClient) {
   }
 
-  getAll(): Observable<any> {
+  /*getAll(): Observable<any> {
     return this.http.get(this.API + '/cool-cars');
+  }*/
+
+  getAll(): Observable<any> {
+    return this.http.get(this.CAR_API);
   }
 
   get(id: string) {
